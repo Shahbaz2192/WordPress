@@ -1,0 +1,8 @@
+kubectl get nodes
+kubectl get pods
+kubectl describe <object> <object name>
+kubectl apply -f .
+kubectl delete <object> <object name>
+kubectl apply -k
+kubectl get all
+kubectl create secret generic <prod-db-secret> --from-literal=username=<username> --from-literal=password=<password>
