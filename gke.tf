@@ -4,8 +4,9 @@ provider "google" {
 }
 
 resource "google_container_cluster" "primary" {
-  name               = "My-Assignment-Project-gke"
+  name = "My-Assignment-Project-gke"
   project = "My-Assignment-Project"
+  count = length(var.region)
   location           = var.region[count.index]
   initial_node_count = 3
 }
